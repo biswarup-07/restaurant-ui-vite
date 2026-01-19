@@ -7,6 +7,29 @@ A responsive restaurant UI converted from the Gericht template to showcase India
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+---
+
+### 📋 Menu Section
+![Menu Section](screenshots/menu.png)
+
+---
+
+### 📍 About 
+![About Section](screenshots/about.png)
+
+---
+
+### 📍 Find Us
+![Find Us  Section](screenshots/find-us.png)
+
+---
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
