@@ -2,10 +2,12 @@ import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import images from '../../constants/images';
+import { useState } from "react";
 import './Navbar.css';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -18,6 +20,7 @@ const Navbar = () => {
         <li className="p__opensans"><a href="#awards">Awards</a></li>
         <li className="p__opensans"><a href="#contact">Contact</a></li>
       </ul>
+      
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">Log In </a>
         <div />
@@ -38,7 +41,23 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
+       <h1 className="logo">Indian Kitchen</h1>
+
+      <div className={`nav-links ${open ? "open" : ""}`}>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div className="hamburger" onClick={() => setOpen(!open)}>
+        ☰
+      </div>
+      
     </nav>
+
+    
   );
 };
 
