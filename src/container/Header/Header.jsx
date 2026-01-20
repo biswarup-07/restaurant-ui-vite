@@ -12,7 +12,14 @@ const Header = () => (
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Traditional recipes, aromatic spices and homely cooking — crafted by our master chefs.
       </p>
-      <button type="button" className="custom__button">Explore Menu</button>
+      <button type="button"
+      className="custom__button"
+      onClick={() =>
+       document
+        .getElementById("menu")
+        .scrollIntoView({ behavior: "smooth" })
+      }
+      >Explore Menu</button>
     </div>
 
     <div className="app__wrapper_img">
