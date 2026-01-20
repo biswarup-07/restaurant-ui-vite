@@ -12,6 +12,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+   
 }
 
 .app__navbar-logo img {
@@ -23,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    gap: 2rem;
     list-style: none;
 }
 
@@ -40,6 +41,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 1rem;
 }
 
 .app__navbar-login a {
@@ -169,5 +171,16 @@
 
   .hamburger {
     display: block;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .app__navbar-links {
+    display: none;
+  }
+
+  .app__navbar-login {
+    display: none;
   }
 }

@@ -21,11 +21,7 @@ const Navbar = () => {
         <li className="p__opensans"><a href="#contact">Contact</a></li>
       </ul>
       
-      <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In </a>
-        <div />
-        <a href="/" className="p__opensans">Book a Table</a>
-      </div>
+      
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
         {toggleMenu && (
@@ -42,18 +38,22 @@ const Navbar = () => {
         )}
       </div>
 
-       <h1 className="logo">Indian Kitchen</h1>
-
-      <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-
-      <div className="hamburger" onClick={() => setOpen(!open)}>
+      
+       <div className="hamburger" onClick={() => setOpen(!open)}>
         ☰
       </div>
+
+
+
+{/* Right side buttons */}
+<div className="app__navbar-login">
+        <a href="#login" className="p__opensans">Log In </a>
+        <div />
+        <a href="/" className="p__opensans">Book a Table</a>
+      </div>
+
+
+     
       
     </nav>
 

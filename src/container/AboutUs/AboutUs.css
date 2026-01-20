@@ -21,12 +21,14 @@
 .app__aboutus-content {
     width: 100%;
     z-index: 2;
+    display: flex;
+  align-items: stretch;
 }
 
 .app__aboutus-content_about {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     flex-direction: column;
 
@@ -45,10 +47,9 @@
 .app__aboutus-content_history {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-between;
     align-items: flex-start;
     flex-direction: column;
-
     text-align: left;
 }
 
@@ -76,6 +77,11 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .app__aboutus-content {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 900px) {
     .app__aboutus-content {
         flex-direction: column;

@@ -15,7 +15,9 @@ const AboutUs = () => (
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">Delight Swagata brings authentic Indian home-style cooking with locally sourced spices.
   Our recipes passed down through generations and refined by our head chef.</p>
-        <button type="button" className="custom__button">Know More</button>
+        <a href="#about">
+  <button className="custom__button">Know More</button>
+</a>
       </div>
 
       <div className="app__aboutus-content_knife flex__center">
