@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect ,useState }from 'react';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
 import { SubHeading } from '../../components';
@@ -7,9 +7,40 @@ import './Gallery.css';
 
 const Gallery = () => {
   const scrollRef = React.useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const scroll = (direction) => {
     const { current } = scrollRef;
+    
+    useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  }, 2000);
+
+  return () => clearInterval(interval);
+}, []);
+
+   useEffect(() => {
+  const interval = setInterval(() => {
+    if (scrollRef.current) {
+      const slideWidth = scrollRef.current.clientWidth;
+      const maxScroll =
+        scrollRef.current.scrollWidth - slideWidth;
+
+      if (scrollRef.current.scrollLeft >= maxScroll) {
+        scrollRef.current.scrollLeft = 0;
+      } else {
+        scrollRef.current.scrollLeft += slideWidth;
+      }
+    }
+  }, 2000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
 
     if (direction === 'left') {
       current.scrollLeft -= 300;
@@ -36,10 +67,7 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <div className="app__gallery-images_arrows">
-          <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
-          <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
-        </div>
+        
       </div>
     </div>
   );
