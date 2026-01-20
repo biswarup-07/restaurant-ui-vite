@@ -12,7 +12,10 @@ const Footer = () => (
 
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
-        <h1 className="app__footer-headtext">Contact Us</h1>
+        <div className="footer__headtext">
+  <h1 className="headtext__cormorant">Contact Us</h1>
+</div>
+
         <p className="p__opensans">12 MG Road, Kolkata, West Bengal 700001</p>
         <p className="p__opensans">+91 98765 43210</p>
         <p className="p__opensans">support@delightswagata.com</p>
@@ -30,9 +33,24 @@ const Footer = () => (
       </div>
 
       <div className="app__footer-links_work">
-        <h1 className="app__footer-headtext">Working Hours</h1>
-        <p className="p__opensans">Mon - Sun: 11:00 am - 11:00 pm</p>
+        
+        <h1 className="headtext__cormorant">Working Hours</h1>
+        <p className="p__opensans">Mon - Fri: 11:00 am - 11:00 pm</p>
+        <p className="p__opensans">Sat - Sun: 10:00 am - 12:00 am</p>
+
+        <a
+          href="https://www.google.com/maps?q=12+MG+Road+Kolkata+West+Bengal+700001"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="visitus__btn-wrapper"
+          >
+          <button className="custom__button">Visit Us</button>
+        </a>
       </div>
+       
+  
+
+
     </div>
 
     <div className="footer__copyright">
