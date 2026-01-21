@@ -12,7 +12,8 @@ const Newsletter = () => (
     </div>
     <div className="app__newsletter-input flex__center">
       <input type="email" placeholder="Enter your email address" />
-      <button type="button" className="custom__button">Subscribe</button>
+
+      <button type="button" className="custom__button" onClick={() => alert('Subscribed Successfully!')} >Subscribe</button>
     </div>
   </div>
 );

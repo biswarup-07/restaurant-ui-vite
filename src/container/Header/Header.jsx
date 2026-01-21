@@ -11,7 +11,7 @@ const Header = () => (
       <h1 className="app__header-h1">Delight Swagata — Authentic Indian Flavours</h1>
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Traditional recipes, aromatic spices and homely cooking — crafted by our master chefs.
-      </p>
+      </p>z
       <button type="button"
       className="custom__button"
       onClick={() =>

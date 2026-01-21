@@ -43,7 +43,7 @@
     }
 }
 .app__header-content {
-  display: flex;
+  display: flex;z
   flex-direction: column;
   gap: 1rem;
 }

@@ -34,10 +34,11 @@ const SpecialMenu = () => (
         </div>
       </div>
     </div>
-
+  <a href="#menu">
     <div style={{ marginTop: 15 }}>
       <button type="button" className="custom__button">View More</button>
     </div>
+  </a>
   </div>
 );
 
