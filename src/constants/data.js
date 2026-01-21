@@ -6,11 +6,13 @@ const wines = [
     title: 'Paneer Butter Masala',
     price: '₹280',
     tags: 'Paneer | Tomato gravy | Cream | North Indian',
+    imgUrl: images.paneer,
   },
   {
     title: 'Chole Bhature',
     price: '₹150',
     tags: 'Chickpea curry | Deep fried bhature | Punjabi',
+    imgUrl: images.chole,
   },
   {
     title: 'Masala Dosa',
@@ -21,6 +23,7 @@ const wines = [
     title: 'Samosa (2 pcs)',
     price: '₹80',
     tags: 'Potato | Peas | Crispy pastry | Street snack',
+    imgUrl: images.samosa,
   },
   {
     title: 'Paneer Tikka',

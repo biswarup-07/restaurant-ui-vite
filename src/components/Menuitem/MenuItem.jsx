@@ -2,12 +2,20 @@ import React from 'react';
 
 import './MenuItem.css';
 
-const MenuItem = ({ title, price, tags }) => (
-  <div className="app__menuitem">
+const MenuItem = ({ title, price, tags, imgUrl }) => (
+
+<div className="app__menuitem">
+
+   <div className="app__menuitem-img">
+    <img src={imgUrl} alt={title} />
+  </div>
+
+   <div className="app__menuitem-content">
     <div className="app__menuitem-head">
       <div className="app__menuitem-name">
         <p className="p__cormorant" style={{ color: '#DCCA87' }}>{title}</p>
       </div>
+
       <div className="app__menuitem-dash" />
       <div className="app__menuitem-price">
         <p className="p__cormorant">{price}</p>
@@ -18,6 +26,7 @@ const MenuItem = ({ title, price, tags }) => (
       <p className="p__opensans" style={{ color: '#AAAAAA' }}>{tags}</p>
     </div>
   </div>
+</div>
 );
 
 export default MenuItem;

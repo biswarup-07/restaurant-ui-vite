@@ -55,7 +55,7 @@ const Gallery = () => {
         <SubHeading title="Instagram" />
         <h1 className="headtext__cormorant">Photo Gallery</h1>
         <p className="p__opensans" style={{ color: '#AAAAAA', marginTop: '2rem' }}> A visual journey through our signature dishes, crafted with love,
-  authentic flavors, and the finest ingredients.</p>z
+  authentic flavors, and the finest ingredients.</p>
         <button type="button" className="custom__button">View More</button>
       </div>
       <div className="app__gallery-images">

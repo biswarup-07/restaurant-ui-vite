@@ -11,7 +11,7 @@ import menu from '../assets/menu.png';
 import overlaybg from '../assets/overlaybg.png';
 import spoon from '../assets/spoon.svg';
 import welcome from '../assets/welcome.png';
-import findus from '../assets/findus.png';
+
 import laurels from '../assets/laurels.png';
 import award01 from '../assets/award01.png';
 import award02 from '../assets/award02.png';
@@ -19,7 +19,9 @@ import award03 from '../assets/award03.png';
 import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
-
+import paneer from '../assets/paneer.jpg';
+import chole from '../assets/chole.jpg';
+import samosa from '../assets/samosa.jpg';
 
 export default {
   bg,
@@ -35,7 +37,7 @@ export default {
   overlaybg,
   spoon,
   welcome,
-  findus,
+
   laurels,
   award01,
   award02,
@@ -43,4 +45,7 @@ export default {
   award05,
   sign,
   quote,
+  paneer,
+  chole,
+  samosa,
 };

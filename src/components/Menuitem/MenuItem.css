@@ -1,10 +1,23 @@
 .app__menuitem {
-    width: 100%;
+    display: flex;
+    align-items: center;
     margin: 1rem 0;
 
-    display: flex;
-    flex-direction: column;
 }
+.app__menuitem-img {
+  flex-shrink: 0;
+}
+.app__menuitem-img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;   /* WhatsApp DP */
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 1px solid var(--color-golden);
+}
+.app__menuitem-content {
+    flex: 1; 
+    margin-left: 1rem;  }
 
 .app__menuitem-head {
     display: flex;
@@ -32,4 +45,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .app__menuitem-img img {
+    width: 38px;
+    height: 38px;
+  }
 }
