@@ -19,20 +19,18 @@
 }
 
 .app__aboutus-content {
-    width: 100%;
-    z-index: 2;
+    /* width: 100%;
+    z-index: 2; */
     display: flex;
   align-items: stretch;
 }
 
 .app__aboutus-content_about {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     flex-direction: column;
-
-    text-align: right;
 }
 
 .app__aboutus-content_knife {
@@ -45,12 +43,12 @@
 }
 
 .app__aboutus-content_history {
-    flex: 1;
+   
     display: flex;
     justify-content: flex-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     flex-direction: column;
-    text-align: left;
+    /* text-align: left; */
 }
 
 .app__aboutus-content_about p,
