@@ -1,13 +1,14 @@
 import React from 'react';
 
 import './MenuItem.css';
+import { data } from '../../constants';
 
-const MenuItem = ({ title, price, tags, imgUrl }) => (
+const MenuItem = ({ title, price, tags, img }) => (
 
 <div className="app__menuitem">
 
    <div className="app__menuitem-img">
-    <img src={imgUrl} alt={title} />
+    <img src={img} alt={title} />
   </div>
 
    <div className="app__menuitem-content">

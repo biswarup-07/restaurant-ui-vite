@@ -17,7 +17,24 @@
 
 .app__gallery-content button {
     margin-top: 1rem;
-}z
+}
+
+.gallery__images {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.gallery__images img {
+  min-width: 100%;
+  height: auto;
+}
+
+.gallery__arrows span {
+  cursor: pointer;
+  font-size: 28px;
+  margin: 0 10px;
+}
 
 .app__gallery-images {
     flex: 1;

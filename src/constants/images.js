@@ -22,6 +22,12 @@ import quote from '../assets/quote.png';
 import paneer from '../assets/paneer.jpg';
 import chole from '../assets/chole.jpg';
 import samosa from '../assets/samosa.jpg';
+import dosa from '../assets/dosa.avif';
+import tikka from '../assets/tikka.jpg';
+import biryani from '../assets/biryani.jpg';
+import naan from '../assets/naan.png';
+import dal from '../assets/dal.webp';
+import jamun from '../assets/jamun.jpg';
 
 export default {
   bg,
@@ -48,4 +54,10 @@ export default {
   paneer,
   chole,
   samosa,
+  dosa,
+  tikka,
+  biryani,
+  naan,
+  dal,
+  jamun,
 };
