@@ -13,7 +13,7 @@ const Header = () => (
       <p className="app__header-h3"> ( No Onion No Garlic )</p>
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Traditional recipes, aromatic spices and homely cooking — crafted by our master chefs.
-      </p>z
+      </p>
       <button type="button"
       className="custom__button"
       onClick={() =>

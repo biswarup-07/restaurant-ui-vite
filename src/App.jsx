@@ -6,7 +6,7 @@ import './App.css';
 import { Contact } from './container';
 
 const App = () => (
-  <div>
+  <div className="app.bg">
     <Navbar />
     <Header />
     <AboutUs />

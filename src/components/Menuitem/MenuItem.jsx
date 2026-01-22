@@ -7,10 +7,10 @@ const MenuItem = ({ title, price, tags, img }) => (
 
 <div className="app__menuitem">
 
-   <div className="app__menuitem-img">
+  <div className="app__menuitem-img">
     <img src={img} alt={title} />
   </div>
-
+  
    <div className="app__menuitem-content">
     <div className="app__menuitem-head">
       <div className="app__menuitem-name">

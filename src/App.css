@@ -24,6 +24,13 @@
   min-height: 100vh;
 }
 
+.app__bg {
+  background: linear-gradient(180deg, #0c0c0c 0%, #000000 100%);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 .app__wrapper_info {
   flex: 1;
   width: 100%;

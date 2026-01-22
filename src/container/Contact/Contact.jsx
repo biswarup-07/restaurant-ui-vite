@@ -4,7 +4,7 @@ import contact from '../../assets/contact.png';
 
 const Contact = () => {
   return (
-    <div className="app__contact section__padding" id="contact">
+    <div className="app__contact app__wrapper section__padding" id="contact">
       <h1 className="headtext__cormorant">Contact Us</h1>
 
       <div className="contact__content">
