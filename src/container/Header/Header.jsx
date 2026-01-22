@@ -8,7 +8,9 @@ const Header = () => (
   <div className="app__header app__wrapper section__padding" id="home">
     <div className="app__wrapper_info">
       <p className="p__cormorant">Taste The Real India</p>
-      <h1 className="app__header-h1">Delight Swagata — Authentic Indian Flavours</h1>
+      <h1 className="app__header-h1">Delight Swagata — </h1>
+      <h1 className="app__header-h2">Authentic Indian Flavours</h1>
+      <p className="app__header-h3"> ( No Onion No Garlic )</p>
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Traditional recipes, aromatic spices and homely cooking — crafted by our master chefs.
       </p>z

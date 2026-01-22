@@ -14,7 +14,7 @@ const AboutUs = () => (
         <p className="p__opensans">Delight Swagata brings authentic Indian home-style cooking with locally sourced spices.
   Our recipes passed down through generations and refined by our head chef.</p>
         <a href="#about">
-  <button className="custom__button">Know More</button>
+  <button className="custom__button">Discover Our Journey</button>
 </a>
       </div>
 
@@ -23,7 +23,7 @@ const AboutUs = () => (
       </div>
 
       <div className="app__aboutus-content_history">
-        <h1 className="headtext__cormorant">Our Story</h1>
+        <h1 className="headtext__cormorant">Explore Our Legacy</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">Founded in 1998, we have served thousands of guests with passion and tradition.</p>
         <button type="button" className="custom__button">Know More</button>

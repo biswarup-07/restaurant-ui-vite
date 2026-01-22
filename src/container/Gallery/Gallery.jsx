@@ -57,7 +57,10 @@ const Gallery = () => {
         <p className="p__opensans" style={{ color: '#AAAAAA', marginTop: '2rem' }}> A visual journey through our signature dishes, crafted with love,
   authentic flavors, and the finest ingredients.</p>
 
-    <a href="#gallery">
+    <a href="https://www.instagram.com/"
+  target="_blank"
+  rel="noreferrer"
+  className="custom__button">
         <button type="button" className="custom__button">View More</button> </a>
       </div>
       <div className="app__gallery-images">
