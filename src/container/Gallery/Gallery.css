@@ -51,12 +51,9 @@
 }
 
 .app__gallery-images_container {
-    display: flex;
-    flex-direction: row;
-    width: max-content;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;  
+     display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -162,7 +159,9 @@
   .app__gallery-images_card {
     min-width: 80vw;   /* better mobile width */
   }
-
+     .app__gallery-images_container img {
+    min-width: 100%;
+  }
   .app__gallery-images_card img {
     height: auto;
     max-height: 60vh;

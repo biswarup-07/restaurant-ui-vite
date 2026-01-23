@@ -20,8 +20,10 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Cormorant Upright', serif;
+  background-color: #0c0c0c;
+  color: #fff;
 }
 
 img {
