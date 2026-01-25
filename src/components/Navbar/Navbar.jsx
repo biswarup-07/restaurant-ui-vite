@@ -4,10 +4,15 @@ import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import images from '../../constants/images';
 import { useState } from "react";
 import './Navbar.css';
+import LoginModal from "./LoginModal";
+import BookTableModal from "./BookTableModal";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   const [open, setOpen] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
+ 
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -39,22 +44,21 @@ const Navbar = () => {
       </div>
 
       
-       <div className="hamburger" onClick={() => setOpen(!open)}>
-        ☰
-      </div>
-
+  
 
 
 {/* Right side buttons */}
 <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In </a>
+    <button onClick={() => setShowLogin(true)}>Log In</button>
         <div />
-        <a href="/" className="p__opensans">Book a Table</a>
+<button onClick={() => setShowBooking(true)}>Book A Table</button>
       </div>
 
 
      
-      
+      {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
+     {showBooking && <BookTableModal onClose={() => setShowBooking(false)} />}
+
     </nav>
 
     

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import './Contact.css';
 import contact from '../../assets/contact.png';
 
 const Contact = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <div className="app__contact app__wrapper section__padding" id="contact">
 
@@ -25,9 +28,13 @@ const Contact = () => {
           <input type="tel" placeholder="Phone Number" />
           <textarea placeholder="Your Message" rows="5"></textarea>
 
-          <button type="submit" className="custom__button">
-            Send Message
-          </button>
+          <button
+  type="button"
+  className="custom__button"
+  onClick={() => setShowPopup(true)}
+>
+  Send Message
+</button>
         </form>
         
           <div className="contact__image">
@@ -55,39 +62,39 @@ const Contact = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Kolkata
+    Kolkata - 12 MG Road
   </a>
 
   <a
-    href="https://www.google.com/maps/search/Delhi+India"
+    href="https://www.google.com/maps/place/Connaught+Place,+New+Delhi"
     target="_blank"
     rel="noopener noreferrer"
   >
-    Delhi
+    Delhi - Connaught Place
   </a>
 
   <a
-    href="https://www.google.com/maps/search/Mumbai+India"
+    href="https://www.google.com/maps/place/Bandra+West,+Mumbai"
     target="_blank"
     rel="noopener noreferrer"
   >
-    Mumbai
+    Mumbai - Bandra West
   </a>
 
   <a
-    href="https://www.google.com/maps/search/Chennai+India"
+    href="https://www.google.com/maps/place/T.+Nagar,+Chennai"
     target="_blank"
     rel="noopener noreferrer"
   >
-    Chennai
+    Chennai - T.Nagar
   </a>
 
   <a
-    href="https://www.google.com/maps/search/Odisha+India"
+    href="https://www.google.com/maps/place/Bhubaneswar,+Odisha"
     target="_blank"
     rel="noopener noreferrer"
   >
-    Odisha
+    Odisha - Bhubaneswar
   </a>
 </div>
  
@@ -110,7 +117,32 @@ const Contact = () => {
     
     </div>
       
+      
+       {/* 👇 YAHAN PASTE KARNA HAI */}
+    {showPopup && (
+      <div className="modal-overlay">
+        <div className="modal-box">
+          <h2 className="modal-title">Message Sent 🎉</h2>
+
+          <p className="p__opensans" style={{ marginTop: "10px" }}>
+            Thank you for contacting us.  
+            We will get back to you shortly.
+          </p>
+
+          <button
+            className="primary-btn modal-login-btn"
+            style={{ marginTop: "20px" }}
+            onClick={() => setShowPopup(false)}
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    )}
+    
     </div>
+
+
   );
 };
 

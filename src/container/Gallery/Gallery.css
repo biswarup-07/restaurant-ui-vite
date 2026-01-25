@@ -114,14 +114,18 @@
 
 .gallery__arrow-icon {
     color: var(--color-golden);
-    font-size: 2rem;
+    font-size: 3.5rem;
     cursor: pointer;
-    background: var(--color-black);
-    border-radius: 5px;
+     background: rgba(0,0,0,0.7);
+      padding: 12px; 
+      transition: all 0.3s ease;
+    border-radius: 50%;
 }
 
 .gallery__arrow-icon:hover {
-    color: var(--color-white);
+     background: var(--color-golden);
+    color: var(--color-black);
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 2000px) {
@@ -168,6 +172,10 @@
     height: auto;
     max-height: 60vh;
     max-width: 95vw;
+  }
+  .gallery__arrow-icon {
+    font-size: 3rem;
+    padding: 10px;
   }
 }
 
