@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const LoginModal = ({ onClose }) => {
   const [showSuccess, setShowSuccess] = useState(false);
+   const [loginType, setLoginType] = useState("");
 
   return (
     <>
@@ -25,14 +26,24 @@ const LoginModal = ({ onClose }) => {
             <button
               type="button"
               className="primary-btn modal-login-btn"
-              onClick={() => setShowSuccess(true)}
+              onClick={() => {
+               setLoginType("user");
+              setShowSuccess(true);
+}}
             >
               Login
             </button>
 
-            <p className="close-btn" onClick={onClose}>
-              Close
-            </p>
+             <p
+  className="close-btn"
+  onClick={() => {
+    setLoginType("guest");
+    setShowSuccess(true);
+  }}
+>
+  Continue as Guest
+</p>
+
           </div>
         </div>
       )}
@@ -40,11 +51,17 @@ const LoginModal = ({ onClose }) => {
       {showSuccess && (
         <div className="modal-overlay">
           <div className="modal-box">
-            <h2 className="modal-title">Login Successful 🎉</h2>
+            <h2 className="modal-title">
+              {loginType === "guest"
+                ? "Logged in as Guest User 🎉"
+                : "Login Successful 🎉"}
+            </h2>
 
             <p className="p__opensans" style={{ marginTop: "10px" }}>
-              Welcome back! You are now logged in.
-            </p>
+  {loginType === "guest"
+    ? "You are browsing as a guest user."
+    : "Welcome back! You are now logged in."}
+</p>
 
             <button
               className="primary-btn modal-login-btn"
