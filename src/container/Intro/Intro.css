@@ -1,18 +1,18 @@
 .app__video {
-    height: 100vh;
+     height: auto;          /* 👈 CHANGE */
+    padding: 4rem 0;       /* 👈 ADD */
     position: relative;
 }
 
 .app__video video {
-     position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
   height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
 }
 
 .app__video-overlay {
@@ -38,11 +38,14 @@
 
 @media screen and (max-width: 768px) {
   .app__video {
-    height: 100vh;
+    height: auto;
+    padding: 2rem 0;
   }
 
   .app__video video {
-    object-fit: contain;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
   }
 }
 

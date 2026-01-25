@@ -17,9 +17,7 @@ preserving authentic satvik flavours passed down through generations.</p>
         
       </div>
 
-      <div className="app__aboutus-content_knife flex__center">
-        <img src={images.knife} alt="about_knife" />
-      </div>
+<div className="about-divider"></div>
 
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">Explore Our Legacy</h1>
