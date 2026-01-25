@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
+import { AboutUs, Chef, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
 import { Navbar } from './components';
 import './App.css';
+import { Contact } from './container';
 
 const App = () => (
-  <div>
+  <div className="app.bg">
     <Navbar />
     <Header />
     <AboutUs />
@@ -14,8 +15,7 @@ const App = () => (
     <Intro />
     <Laurels />
     <Gallery />
-    <FindUs />
-    <Footer />
+    <Contact />
   </div>
 );
 

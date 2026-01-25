@@ -15,8 +15,8 @@ const SpecialMenu = () => (
       <div className="app__specialMenu-menu_wine  flex__center">
         <p className="app__specialMenu-menu_heading">Starters</p>
         <div className="app__specialMenu_menu_items">
-          {data.wines.map((wine, index) => (
-            <MenuItem key={wine.title + index} title={wine.title} price={wine.price} tags={wine.tags} />
+          {data.starters.map((starter, index) => (
+            <MenuItem key={starter.title + index} title={starter.title} price={starter.price} tags={starter.tags} img={starter.img} />
           ))}
         </div>
       </div>
@@ -28,16 +28,17 @@ const SpecialMenu = () => (
       <div className="app__specialMenu-menu_cocktails  flex__center">
         <p className="app__specialMenu-menu_heading">Main Course</p>
         <div className="app__specialMenu_menu_items">
-          {data.cocktails.map((cocktail, index) => (
-            <MenuItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
+          {data.mainCourses.map((mainCourse, index) => (
+            <MenuItem key={mainCourse.title + index} title={mainCourse.title} price={mainCourse.price} tags={mainCourse.tags} img={mainCourse.img} />
           ))}
         </div>
       </div>
     </div>
-
+  <a href="#menu">
     <div style={{ marginTop: 15 }}>
       <button type="button" className="custom__button">View More</button>
     </div>
+  </a>
   </div>
 );
 

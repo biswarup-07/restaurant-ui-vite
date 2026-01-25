@@ -14,7 +14,9 @@ const Intro = () => {
         ref={vidRef}
         src={meal}
         type="video/mp4"
+        autoPlay 
         loop
+        playsInline
         controls={false}
         muted
       />

@@ -20,8 +20,10 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Cormorant Upright', serif;
+  background-color: #0c0c0c;
+  color: #fff;
 }
 
 img {
@@ -36,6 +38,8 @@ img {
   margin: 0;
   scroll-behavior: smooth;
 }
+
+
 
 a {
   color: unset;
@@ -66,5 +70,19 @@ a {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+.app_wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .app_wrapper {
+    padding: 60px 16px;
   }
 }

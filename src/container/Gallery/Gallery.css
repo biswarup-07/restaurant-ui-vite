@@ -15,8 +15,30 @@
     padding-right: 2rem;
 }
 
+.custom__button {
+    margin-top: 1rem;
+    
+}
+
 .app__gallery-content button {
     margin-top: 1rem;
+}
+
+.gallery__images {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.gallery__images img {
+  min-width: 100%;
+  height: auto;
+}
+
+.gallery__arrows span {
+  cursor: pointer;
+  font-size: 28px;
+  margin: 0 10px;
 }
 
 .app__gallery-images {
@@ -29,12 +51,10 @@
 }
 
 .app__gallery-images_container {
-    display: flex;
-    flex-direction: row;
-    width: max-content;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;  
+     display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -43,13 +63,14 @@
 
 .app__gallery-images_card {
     position: relative;
-    min-width: 100%
+    min-width: 100%;
     height: 100%;
     flex-shrink: 0;
     display: flex;  
     justify-content: center;
+    scroll-snap-align: start;
     align-items: center;
-    margin-right: rem;
+    margin-right: 0;
 }
 
 .gallery__image-icon {
@@ -93,14 +114,18 @@
 
 .gallery__arrow-icon {
     color: var(--color-golden);
-    font-size: 2rem;
+    font-size: 3.5rem;
     cursor: pointer;
-    background: var(--color-black);
-    border-radius: 5px;
+     background: rgba(0,0,0,0.7);
+      padding: 12px; 
+      transition: all 0.3s ease;
+    border-radius: 50%;
 }
 
 .gallery__arrow-icon:hover {
-    color: var(--color-white);
+     background: var(--color-golden);
+    color: var(--color-black);
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 2000px) {
@@ -138,13 +163,19 @@
 
 @media screen and (max-width: 768px) {
   .app__gallery-images_card {
-    min-width: 80vw;   /* better mobile width */
+    min-width: 100vw;   /* better mobile width */
   }
-
+     .app__gallery-images_container img {
+    min-width: 100%;
+  }
   .app__gallery-images_card img {
     height: auto;
     max-height: 60vh;
     max-width: 95vw;
+  }
+  .gallery__arrow-icon {
+    font-size: 3rem;
+    padding: 10px;
   }
 }
 

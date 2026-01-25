@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+section {
+  margin-bottom: 0;
+}
+
 .app__bg {
   background: url('./assets/bg.png');
   background-position: center;
@@ -20,9 +24,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  min-height: 100vh;
+  padding: 3rem 4rem;
+  min-height: auto;
 }
+
+.app__bg {
+  background: linear-gradient(180deg, #0c0c0c 0%, #000000 100%);
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 .app__wrapper_info {
   flex: 1;
@@ -51,6 +62,45 @@
 .app__wrapper_img img {
   width: 80%;
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  animation: pop 0.25s ease;
+  position: relative;
+  z-index: 10000;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-box button {
+  cursor: pointer;   /* 👈 popup button pe bhi hand */
+}
+
+
 
 .custom__button {
   background-color: var(--color-accent);
@@ -101,6 +151,79 @@
   width: 45px;
 }
 
+.modal-box {
+  background: linear-gradient(180deg, #111 0%, #000 100%);
+  color: #fff;
+  padding: 30px;
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  animation: pop 0.25s ease;
+  position: relative;
+  z-index: 10000;
+  text-align: center;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+
+.modal-login-btn {
+  margin-top: 10px;
+  background: #f5c400;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.modal-login-btn:hover {
+  background: #ffdb4d;
+  transform: translateY(-2px);
+}
+
+.modal-login-btn:active {
+  transform: scale(0.96);
+}
+.close-btn {
+  margin-top: 16px;
+  font-size: 16px;          /* 🔥 font bada */
+  font-weight: 600;        /* 🔥 clear text */
+  color: #f5c400;          /* 🔥 gold highlight */
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.close-btn:hover {
+ color: #fff;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+
+.hero-image {
+  width: 100%;
+  max-height: 520px;      /* 👈 laptop me niche se zyada bada nahi */
+  object-fit: cover;     /* 👈 image crop nahi, fit rahe */
+  border-radius: 18px;
+}
+
 @media screen and (min-width: 2000px) {
   .custom__button,
   .p__cormorant {
@@ -144,6 +267,12 @@
 @media screen and (max-width: 850px) {
   .section__padding {
     padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-image {
+    max-height: 360px;   /* 👈 phone ke liye chhoti height */
   }
 }
 
