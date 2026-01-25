@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+section {
+  margin-bottom: 0;
+}
+
 .app__bg {
   background: url('./assets/bg.png');
   background-position: center;
@@ -20,8 +24,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  min-height: 100vh;
+  padding: 3rem 4rem;
+  min-height: auto;
 }
 
 .app__bg {

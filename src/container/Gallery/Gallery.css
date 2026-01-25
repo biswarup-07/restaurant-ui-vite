@@ -52,8 +52,9 @@
 
 .app__gallery-images_container {
      display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -62,13 +63,14 @@
 
 .app__gallery-images_card {
     position: relative;
-    min-width: 100%
+    min-width: 100%;
     height: 100%;
     flex-shrink: 0;
     display: flex;  
     justify-content: center;
+    scroll-snap-align: start;
     align-items: center;
-    margin-right: rem;
+    margin-right: 0;
 }
 
 .gallery__image-icon {
@@ -157,7 +159,7 @@
 
 @media screen and (max-width: 768px) {
   .app__gallery-images_card {
-    min-width: 80vw;   /* better mobile width */
+    min-width: 100vw;   /* better mobile width */
   }
      .app__gallery-images_container img {
     min-width: 100%;

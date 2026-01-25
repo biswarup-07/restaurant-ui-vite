@@ -8,8 +8,9 @@
   flex-shrink: 0;
 }
 .app__menuitem-img img {
-  width: 42px;
-  height: 42px;
+  width: 90px;
+  height: 90px;
+   min-width: 70px;  
   border-radius: 50%;   /* WhatsApp DP */
   object-fit: cover;
   margin-right: 1rem;
@@ -51,7 +52,8 @@
 /* Mobile */
 @media screen and (max-width: 768px) {
   .app__menuitem-img img {
-    width: 34px;
-    height: 34px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
   }
 }

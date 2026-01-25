@@ -21,6 +21,8 @@ const MenuItem = ({ title, price, tags, img }) => (
       <div className="app__menuitem-price">
         <p className="p__cormorant">{price}</p>
       </div>
+
+      
     </div>
 
     <div className="app__menuitem-sub">
@@ -28,6 +30,8 @@ const MenuItem = ({ title, price, tags, img }) => (
     </div>
   </div>
 </div>
+
+    
 );
 
 export default MenuItem;

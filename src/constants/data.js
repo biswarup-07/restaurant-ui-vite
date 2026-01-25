@@ -42,17 +42,22 @@ const mainCourses = [
     img: images.biryani,
   },
   {
-    title: 'Butter Naan (2pcs)',
-    price: '₹60',
-    tags: 'Tandoor baked | Butter | Bread',
-    img: images.naan,
-  },
+  title: 'Shahi Paneer',
+  price: '₹240',
+  tags: 'Cottage Cheese | Rich Gravy | North Indian',
+  img: images.shahi,},
 
   {
     title: 'Dal Makhani',
     price: '₹180',
     tags: 'Black lentils | Creamy | Punjabi dal',
     img: images.dal,
+  },
+   {
+    title: 'Butter Naan (2pcs)',
+    price: '₹60',
+    tags: 'Tandoor baked | Butter | Bread',
+    img: images.naan,
   },
   {
     title: 'Gulab Jamun (2 pcs)',

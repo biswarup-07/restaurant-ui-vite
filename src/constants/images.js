@@ -28,6 +28,7 @@ import biryani from '../assets/biryani.jpg';
 import naan from '../assets/naan.png';
 import dal from '../assets/dal.webp';
 import jamun from '../assets/jamun.jpg';
+import shahi from '../assets/shahi.avif';
 
 export default {
   bg,
@@ -60,4 +61,5 @@ export default {
   naan,
   dal,
   jamun,
+  shahi
 };

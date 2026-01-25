@@ -7,26 +7,58 @@ import './Gallery.css';
 
 const Gallery = () => {
   const scrollRef = useRef(null);
+  const imagesCount = images.length;
 
   const scroll = (direction) => {
-    const { current } = scrollRef;
-    if (direction === 'left') {
-      current.scrollLeft -= 300;
+  const container = scrollRef.current;
+  const scrollAmount = container.offsetWidth;
+  const maxScroll = container.scrollWidth - scrollAmount;
+
+  if (direction === 'left') {
+    if (container.scrollLeft === 0) {
+      container.scrollTo({ left: maxScroll, behavior: 'smooth' });
     } else {
-      current.scrollLeft += 300;
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
+  } else {
+    if (container.scrollLeft >= maxScroll) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+};
+ useEffect(() => {
+  const container = scrollRef.current;
+  if (!container) return;
+  
+  const slideWidth = container.offsetWidth;
+  container.scrollLeft = slideWidth;
+
+  const interval = setInterval(() => {
+    const visibleWidth = container.offsetWidth;
+    const maxScroll = container.scrollWidth - visibleWidth;
+
+    if (container.scrollLeft >= maxScroll) {
+      container.scrollTo({
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      container.scrollBy({
+        left: visibleWidth,
+        behavior: 'smooth',
+      });
+    }
+  }, 2500);
+
+  return () => {
+    clearInterval(interval);
   };
+}, []);
 
-  // ✅ AUTO SCROLL FIX
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += 300;
-      }
-    }, 2500);
+   
 
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="app__gallery app__wrapper section__padding flex__center">
@@ -39,15 +71,7 @@ const Gallery = () => {
           authentic flavors, and the finest ingredients.
         </p>
 
-        {/* ✅ CLEAN BUTTON */}
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="custom__button"
-        >
-          View More
-        </a>
+        
       </div>
 
       <div className="app__gallery-images">
@@ -57,7 +81,12 @@ const Gallery = () => {
         />
 
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {[images.gallery01, images.gallery02, images.gallery03, images.gallery04].map(
+          {[images.gallery04, // 🔥 last clone at start
+  images.gallery01,
+  images.gallery02,
+  images.gallery03,
+  images.gallery04,
+  images.gallery01].map(
             (image, index) => (
               <div className="app__gallery-images_card flex__center" key={index}>
                 <img src={image} alt="gallery" />
