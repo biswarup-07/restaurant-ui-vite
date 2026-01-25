@@ -42,7 +42,7 @@
       padding: 3rem 1rem;
   }
 }
-media (max-width: 768px) {
+@media (max-width: 768px) {
   .header__title {
     font-size: 42px;
   }
