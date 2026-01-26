@@ -52,9 +52,10 @@
 
 .app__gallery-images_container {
      display: flex;
-  overflow-x: hidden;
+     gap: 2rem;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+   -webkit-overflow-scrolling: touch;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -62,15 +63,11 @@
 }
 
 .app__gallery-images_card {
-    position: relative;
-    min-width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    display: flex;  
-    justify-content: center;
-    scroll-snap-align: start;
-    align-items: center;
-    margin-right: 0;
+     flex: 0 0 80%;
+  max-width: 80%;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery__image-icon {
@@ -83,14 +80,12 @@
 }
 
 .app__gallery-images_card img {
-    width: 100%;
-    height: auto;
-    max-height: 75vh;   
-    max-width: 100%;        
-    object-fit: contain;
-    opacity: 1;
-    transition: .5s ease;
-    background-color: var(--color-black);
+    width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--color-golden);
+  box-shadow: 0 0 25px rgba(220, 190, 120, 0.35);
 }
 
 .app__gallery-images_card:hover img {
@@ -163,7 +158,8 @@
 
 @media screen and (max-width: 768px) {
   .app__gallery-images_card {
-    min-width: 100vw;   /* better mobile width */
+    flex: 0 0 100%;
+    max-width: 100%;
   }
      .app__gallery-images_container img {
    width: 100%;
@@ -171,9 +167,8 @@
   object-fit: contain;
   }
   .app__gallery-images_card img {
-    height: auto;
-    max-height: 60vh;
-    max-width: 95vw;
+     width: 320px;
+    height: 320px;
   }
   .gallery__arrow-icon {
     font-size: 3rem;

@@ -31,32 +31,42 @@ const Gallery = () => {
  useEffect(() => {
   const container = scrollRef.current;
   if (!container) return;
-  
+
   const slideWidth = container.offsetWidth;
+
+  // start from first real slide
   container.scrollLeft = slideWidth;
 
   const interval = setInterval(() => {
-    const visibleWidth = container.offsetWidth;
-    const maxScroll = container.scrollWidth - visibleWidth;
-
-    if (container.scrollLeft >= maxScroll) {
-      container.scrollTo({
-        left: 0,
-        behavior: 'smooth',
-      });
-    } else {
-      container.scrollBy({
-        left: visibleWidth,
-        behavior: 'smooth',
-      });
-    }
+    container.scrollBy({
+      left: slideWidth,
+      behavior: 'smooth',
+    });
   }, 2500);
+
+  const handleScroll = () => {
+    // last clone → jump to first real
+    if (
+      container.scrollLeft >=
+      container.scrollWidth - slideWidth
+    ) {
+      container.scrollLeft = slideWidth;
+    }
+
+    // first clone → jump to last real
+    if (container.scrollLeft <= 0) {
+      container.scrollLeft =
+        container.scrollWidth - slideWidth * 2;
+    }
+  };
+
+  container.addEventListener('scroll', handleScroll);
 
   return () => {
     clearInterval(interval);
+    container.removeEventListener('scroll', handleScroll);
   };
 }, []);
-
    
 
 
@@ -88,7 +98,7 @@ const Gallery = () => {
   images.gallery04,
   images.gallery01].map(
             (image, index) => (
-              <div className="app__gallery-images_card flex__center" key={index}>
+              <div className="app__gallery-images_card " key={index}>
                 <img src={image} alt="gallery" loading="lazy"/>
                 <BsInstagram className="gallery__image-icon" />
               </div>
