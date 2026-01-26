@@ -21,8 +21,8 @@ const Gallery = () => {
       container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   } else {
-    if (container.scrollLeft >= maxScroll) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
+    if (container.scrollLeft >= maxScroll - 5) {
+      container.scrollTo({ left: 0, behavior: 'auto' });
     } else {
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
