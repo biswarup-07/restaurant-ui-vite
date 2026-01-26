@@ -11,22 +11,32 @@ This template provides a minimal setup to get React working in Vite with HMR and
 ## 📸 Project Screenshots
 
 ### 🏠 Home Page
-![Home Page](public/screenshots/home.png)
-
----
-
-### 📋 Menu Section
-![Menu Section](public/screenshots/menu.jpg)
+![Home Page](public/screenshots/home.jpeg)
 
 ---
 
 ### 📍 About 
-![About Section](public/screenshots/about.jpg)
+![About Section](public/screenshots/about.jpeg)
 
 ---
 
-### 📍 Find Us
-![Find Us  Section](public/screenshots/find-us.jpg)
+### 📋 Menu Section
+![Menu Section](public/screenshots/menu.jpeg)
+
+---
+
+### 📋 Award Section
+![Award Section](public/screenshots/awards.jpeg)
+
+---
+
+### 📋 Gallery Section
+![Gallery Section](public/screenshots/gallery.jpeg)
+
+---
+
+### 📋 Contact Section
+![Contact Section](public/screenshots/contact.jpeg)
 
 ---
 
