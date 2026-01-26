@@ -28,45 +28,7 @@ const Gallery = () => {
     }
   }
 };
- useEffect(() => {
-  const container = scrollRef.current;
-  if (!container) return;
 
-  const slideWidth = container.offsetWidth;
-
-  // start from first real slide
-  container.scrollLeft = slideWidth;
-
-  const interval = setInterval(() => {
-    container.scrollBy({
-      left: slideWidth,
-      behavior: 'smooth',
-    });
-  }, 2500);
-
-  const handleScroll = () => {
-    // last clone → jump to first real
-    if (
-      container.scrollLeft >=
-      container.scrollWidth - slideWidth
-    ) {
-      container.scrollLeft = slideWidth;
-    }
-
-    // first clone → jump to last real
-    if (container.scrollLeft <= 0) {
-      container.scrollLeft =
-        container.scrollWidth - slideWidth * 2;
-    }
-  };
-
-  container.addEventListener('scroll', handleScroll);
-
-  return () => {
-    clearInterval(interval);
-    container.removeEventListener('scroll', handleScroll);
-  };
-}, []);
    
 
 
@@ -91,12 +53,10 @@ const Gallery = () => {
         />
 
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {[images.gallery04, // 🔥 last clone at start
-  images.gallery01,
+          {[ images.gallery01,
   images.gallery02,
   images.gallery03,
-  images.gallery04,
-  images.gallery01].map(
+  images.gallery04].map(
             (image, index) => (
               <div className="app__gallery-images_card " key={index}>
                 <img src={image} alt="gallery" loading="lazy"/>
